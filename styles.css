@@ -1,0 +1,11 @@
+*{
+    text-align: center;
+    background-color: rgb(214, 245, 248);
+    font-family: Arial, 
+   }
+#getWeatherButton{
+    background-color: rgb(240, 227, 106);
+    border: rgb(221, 201, 19) solid;
+    padding: 5px 5px;
+    border-radius: 15px; 
+}
