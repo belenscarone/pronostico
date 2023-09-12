@@ -10,7 +10,8 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
                 .then(data => {
                     let weatherInfo = document.getElementById('weatherInfo');
                     weatherInfo.innerHTML = '<br>' + 'Temperatura: ' + data.main.temp + ' °C' +
-                                            '<br>Descripción del clima: ' + data.weather[0].description + '<br>Humedad: ' + data.main.humidity + '%' +
+                                            '<br>Descripción del clima: ' + data.weather[0].description + '<img src="https://openweathermap.org/img/wn/${weatherInfo.weather.icon}@2x.png" alt="ícono representativo del clima actual"/>'
+                                            '<br>Humedad: ' + data.main.humidity + '%' +
                                             '<br>Velocidad del viento: ' + data.wind.speed + ' m/s';     
         }).catch(error => {
             console.error('Error:', error);
