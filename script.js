@@ -9,9 +9,8 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
                 .then(response => response.json())
                 .then(data => {
                     let weatherInfo = document.getElementById('weatherInfo');
-                    weatherInfo.innerHTML = '<br>' + 'Temperatura: ' + data.main.temp + ' °C' +
-                                            '<br>Descripción del clima: ' + data.weather[0].description + `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="ícono representativo del clima actual"/>`
-                                            '<br>Humedad: ' + data.main.humidity + '%' +
+                    weatherInfo.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="ícono representativo del clima actual"/>` + '<br>' + 'Temperatura: ' + data.main.temp + ' °C' +
+                                            '<br>Descripción del clima: ' + data.weather[0].description +'<br>Humedad: ' + data.main.humidity + '%' +
                                             '<br>Velocidad del viento: ' + data.wind.speed + ' m/s';     
         }).catch(error => {
             console.error('Error:', error);
@@ -21,7 +20,7 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
         .catch(error => {
             console.error('Error:', error);
             let weatherInfo = document.getElementById('weatherInfo');
-            weatherInfo.innerHTML = 'Hubo un error al obtener la ubicación.';
+            weatherInfo.innerHTML = 'Hubo un error al obtener zla ubicación.';
         });
     });
 });
